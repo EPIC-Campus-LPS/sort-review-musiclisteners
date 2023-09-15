@@ -87,11 +87,11 @@ public class QuadSorts {
 
     }
 
-    public static void mergeSort(int[] array) {
+    public static int[] mergeSort(int[] array) {
 
         if (array.length == 1) {
 
-            return;
+            return array;
 
         }
 
@@ -99,25 +99,23 @@ public class QuadSorts {
         int right = array.length;
         int mid = right/2;
 
-        int[] lArr = new int[mid];
-        int[] rArr = new int[right-mid];
-
-        for (int i = left; i < mid; i++) {
-            lArr[i] = array[i];
-        }
-        for (int j = mid; j < right; j++) {
-            rArr[j] = array[j];
-        }
-
-        mergeSort(lArr);
-        mergeSort(rArr);
-
-
+        mergeSort(array);
 
     }
 
-    static void merge(int[] array) {
+    static int[] merge(int[] lArr, int[] rArr) {
 
+
+
+        int lLen = lArr.length;
+        int rLen = rArr.length;
+
+        int[] newArr = new int[lLen + rLen];
+        for (int i = 0; i < lLen; i++) {
+
+
+
+        }
 
 
     }
