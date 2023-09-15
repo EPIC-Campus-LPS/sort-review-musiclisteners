@@ -82,7 +82,7 @@ public class QuadSorts {
                 j--;
 
             }
-
+            array[j+1] = k;
         }
 
     }
