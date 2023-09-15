@@ -87,32 +87,76 @@ public class QuadSorts {
 
     }
 
-    public static int[] mergeSort(int[] array) {
+    public static void mergeSort(int[] array) {
 
-        return mergeSorter(array, 0, array.length);
-
-    }
-
-    static int[] mergeSorter(int[] array, int left, int right) {
-
-
+        mergeSorter(array, 0, array.length);
 
     }
 
-    static int[] merge(int[] lArr, int[] rArr) {
+    static void mergeSorter(int[] array, int left, int right) {
 
+        int mid = (left + right) / 2;
+        if (left < right) {
 
+            mergeSorter(array, left, mid);
+            mergeSorter(array, mid+1, right);
 
-        int lLen = lArr.length;
-        int rLen = rArr.length;
-
-        int[] newArr = new int[lLen + rLen];
-        for (int i = 0; i < lLen; i++) {
-
-
+            merge(array, left, mid, right);
 
         }
 
+    }
+
+    static void merge(int[] array, int left, int mid, int right) {
+
+        int[] leftArr = new int[mid-left+1];
+        int[] rightArr = new int[right-mid];
+
+        for (int i = 0; i < leftArr.length; i++) {
+            leftArr[i] = array[left+i];
+
+        }
+        for (int j = 0; j < rightArr.length; j++) {
+            rightArr[j] = array[mid+j+1];
+        }
+
+        int i = 0;
+        int j = 0;
+        int k = mid;
+
+        while (i < leftArr.length && j < rightArr.length) {
+
+            if (leftArr[i] <= rightArr[j]) {
+
+                array[k] = leftArr[i];
+                i++;
+
+            } else {
+
+                array[k] = rightArr[j];
+                j++;
+
+            }
+
+            k++;
+
+        }
+
+        while (i < leftArr.length) {
+
+            array[k] = leftArr[i];
+            i++;
+            k++;
+
+        }
+
+        while (j < rightArr.length) {
+
+            array[k] = rightArr[j];
+            j++;
+            k++;
+
+        }
 
     }
 
