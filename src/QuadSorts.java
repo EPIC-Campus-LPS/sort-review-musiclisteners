@@ -89,17 +89,13 @@ public class QuadSorts {
 
     public static int[] mergeSort(int[] array) {
 
-        if (array.length == 1) {
+        return mergeSorter(array, 0, array.length);
 
-            return array;
+    }
 
-        }
+    static int[] mergeSorter(int[] array, int left, int right) {
 
-        int left = 0;
-        int right = array.length;
-        int mid = right/2;
 
-        mergeSort(array);
 
     }
 

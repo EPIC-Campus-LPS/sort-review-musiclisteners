@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c731394b-3b8b-4b3f-9959-7ab0a6255d3c" name="Changes" comment="worked on mergeSort() method">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuadSorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QuadSorts.java" afterDir="false" />
-    </list>
+    <list default="true" id="c731394b-3b8b-4b3f-9959-7ab0a6255d3c" name="Changes" comment="worked on mergeSort() method" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +84,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694793351608</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="worked on mergeSort() method">
+      <option name="closed" value="true" />
+      <created>1694795871180</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1694795871180</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
