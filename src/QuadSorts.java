@@ -95,8 +95,9 @@ public class QuadSorts {
 
     static void mergeSorter(int[] array, int left, int right) {
 
-        int mid = (left + right) / 2;
+
         if (left < right) {
+            int mid = (left + right) / 2;
 
             mergeSorter(array, left, mid);
             mergeSorter(array, mid+1, right);
@@ -116,7 +117,7 @@ public class QuadSorts {
             leftArr[i] = array[left+i];
 
         }
-        for (int j = 0; j < rightArr.length; j++) {
+        for (int j = 0; j < rightArr.length-mid; j++) {
             rightArr[j] = array[mid+j+1];
         }
 
@@ -150,7 +151,7 @@ public class QuadSorts {
 
         }
 
-        while (j < rightArr.length) {
+        while (j < rightArr.length) { //fix off by one with midpoint and total array
 
             array[k] = rightArr[j];
             j++;
@@ -160,10 +161,5 @@ public class QuadSorts {
 
     }
 
-    public static void main(String[] args) {
-
-
-
-    }
 
 }
