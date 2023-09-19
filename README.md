@@ -20,14 +20,17 @@
 - Your handwritten code may be included as part of your GitHub submission or turned in in-person.
 ### Reflection Questions
 1. What group roles did you define for your team? 
-  Nathan was the primary driver and Kellyn was the primary navigatory, though we switched a few times.
+Nathan was the primary driver and Kellyn was the primary navigator, but we did switch a couple of times. 
 2. What differences are there between your handwritten code and your completed code?
-  Handwritten code was significantly more gross. Typed code had less errors.
+Are handwritten code was a little more primitive, and we improved on it when was put into the computer. We also found it easier to develop the code on the computer.
 3. What aspects of "good code" does this project demonstrate?
-
+Efficiency, Accuracy, Modularity
 4. What challenges did you face during this project?
+We faced a lot of problems with merge sort and not being able to get past it. We ran into some indexoutofbounds errors so we eventually decided to utilize our time and copied it from geeks4geeks. 
 5. What is the difference between interative and recursive design?
+Interative is a function that loops to repeat some part of the code while recursive calls itself again to repeat the code.
 6. Why do you think software engineers generate Javadoc references or equivalent for their projects? What is effective about Javadoc comments?
+Software engineers generate javadoc references because it lets the code become easier to understand and improves the general structure of everything. 
 
 
 ---
