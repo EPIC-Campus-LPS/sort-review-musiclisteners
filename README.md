@@ -20,8 +20,11 @@
 - Your handwritten code may be included as part of your GitHub submission or turned in in-person.
 ### Reflection Questions
 1. What group roles did you define for your team? 
+  Nathan was the primary driver and Kellyn was the primary navigatory, though we switched a few times.
 2. What differences are there between your handwritten code and your completed code?
+  Handwritten code was significantly more gross. Typed code had less errors.
 3. What aspects of "good code" does this project demonstrate?
+
 4. What challenges did you face during this project?
 5. What is the difference between interative and recursive design?
 6. Why do you think software engineers generate Javadoc references or equivalent for their projects? What is effective about Javadoc comments?
