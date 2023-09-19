@@ -1,34 +1,45 @@
+/**********
+ *
+ * @author Nathan Hoehndorf and Kellyn Hartzler
+ * @version 1.0  -- 09/19/2023
+ * @see SortingTester
+ *
+ *********/
+
 public class QuadSorts {
 
+    /**
+     * @param array - an integer array to be sorted
+     */
     public static void bubbleSort(int[] array) {
 
-        boolean solved = false;
-        while (!solved) {
+        boolean solved = false; // variable for while loop
+        while (!solved) { // checks that array is not sorted -- continues to sort
 
-            for (int i = 0;i < array.length-1; i++) {
+            for (int i = 0; i < array.length - 1; i++) { // traverses through whole array
 
-                if (array[i] > array[i+1]) {
+                if (array[i] > array[i + 1]) { // if the value is bigger than the following value
 
-                    solved = false;
-                    break;
+                    solved = false; // keep looping
+                    break; // restart the while loop
 
                 } else {
 
-                    solved = true;
+                    solved = true; // the array is sorted
 
                 }
 
             }
 
-            if (!solved) {
+            if (!solved) { // needed since the loop above can cause problems
 
-                for (int j = 0; j < array.length-1; j++) {
+                for (int j = 0; j < array.length - 1; j++) { // traverses through whole array
 
-                    if (array[j] > array[j+1]) {
+                    if (array[j] > array[j + 1]) { // checks what was checked in the for loop
 
-                        int temp = array[j];
-                        array[j] = array[j+1];
-                        array[j+1] = temp;
+                        int temp = array[j];     // switches
+                        array[j] = array[j + 1]; // the
+                        array[j + 1] = temp;     // values
 
                     }
 
@@ -40,68 +51,78 @@ public class QuadSorts {
 
     }
 
+    /**
+     * @param array - an integer array to be sorted
+     */
     public static void selectionSort(int[] array) {
 
-        for (int i = 0; i < array.length-1; i++) {
+        for (int i = 0; i < array.length - 1; i++) { // traverses array
 
-            int small = array[i];
-            int place = i;
-            for (int j = i+1; j < array.length; j++) {
+            int small = array[i]; // makes a placeholder smallest value -- if already sorted, creates a better scenario
+            int place = i; // active index
+            for (int j = i + 1; j < array.length; j++) { // checks every value after the current value
 
-                if (array[j] < small) {
+                if (array[j] < small) { // checks if the current value is the current smallest
 
-                    small = array[j];
-                    place = j;
+                    small = array[j]; //
+                    place = j;        // updates placeholder variables
 
                 }
 
             }
 
-            if (small == array[i]) {
+            if (small == array[i]) { // in case they're equal, move on to next iteration
 
                 continue;
 
             }
-            array[place] = array[i];
-            array[i] = small;
+            array[place] = array[i]; // switches
+            array[i] = small;        // places
 
         }
 
     }
 
+    /**
+     * @param array - an integer array to be sorted
+     */
     public static void insertionSort(int[] array) {
 
-        for (int i = 1; i < array.length; i++) {
+        for (int i = 1; i < array.length; i++) { // traverses through whole array
 
-            int k = array[i];
-            int j = i-1;
+            int k = array[i]; // current value
+            int j = i - 1; // previous index
 
-            while (j >= 0 && array[j] > k) {
+            while (j >= 0 && array[j] > k) { // checks that end of array has not been reached and that current value is greater than placeholder
 
-                array[j+1] = array[j];
-                j--;
+                array[j + 1] = array[j]; // moves up array
+                j--; // decrements
 
             }
-            array[j+1] = k;
+            array[j + 1] = k; // fills in "empty" space
         }
 
     }
 
+    /**
+     * @param array - an integer array to be sorted
+     */
     public static void mergeSort(int[] array) {
 
-        mergeSorter(array, 0, array.length);
+        mergeSorter(array, 0, array.length); // calls mergeSorter() method with correct amount of arguments
 
     }
 
     /**
      * copied from geeksforgeeks
-     * @param arr
-     * @param l
-     * @param r
+     *
+     * @param arr - an integer array to be sorted
+     * @param l   - the left index of the array to be used
+     * @param r   - the right index of the array to be used
      */
     static void mergeSorter(int[] arr, int l, int r) {
 
-        if (l < r) {
+        if (l < r) { // checks that you are in the right place of the array
 
             // Find the middle point
             int m = l + (r - l) / 2;
@@ -119,10 +140,11 @@ public class QuadSorts {
 
     /**
      * copied from geeksforgeeks
-     * @param arr
-     * @param l
-     * @param m
-     * @param r
+     *
+     * @param arr - an integer array to be sorted
+     * @param l   - the left index of the array to merge back up
+     * @param m   - the right middle index of the array to split the array into two
+     * @param r   - the right index of the array to merge back up
      */
     static void merge(int arr[], int l, int m, int r) {
 
@@ -151,8 +173,7 @@ public class QuadSorts {
             if (L[i] <= R[j]) {
                 arr[k] = L[i];
                 i++;
-            }
-            else {
+            } else {
                 arr[k] = R[j];
                 j++;
             }
@@ -174,79 +195,6 @@ public class QuadSorts {
         }
 
     }
-
-
-
-
-    /*
-     * static void mergeSorter(int[] array, int left, int right) {
-     *
-     *
-     *         if (left < right) {
-     *             int mid = (left + right) / 2;
-     *
-     *             mergeSorter(array, left, mid);
-     *             mergeSorter(array, mid+1, right);
-     *
-     *             merge(array, left, mid, right);
-     *
-     *         }
-     *
-     *     }
-     *
-     *     static void merge(int[] array, int left, int mid, int right) {
-     *
-     *         int[] leftArr = new int[mid-left+1];
-     *         int[] rightArr = new int[right-mid];
-     *
-     *         for (int i = 0; i < leftArr.length; i++) {
-     *             leftArr[i] = array[left+i];
-     *
-     *         }
-     *         for (int j = 0; j < rightArr.length-mid; j++) {
-     *             rightArr[j] = array[mid+j+1];
-     *         }
-     *
-     *         int i = 0;
-     *         int j = 0;
-     *         int k = mid;
-     *
-     *         while (i < leftArr.length && j < rightArr.length) {
-     *
-     *             if (leftArr[i] <= rightArr[j]) {
-     *
-     *                 array[k] = leftArr[i];
-     *                 i++;
-     *
-     *             } else {
-     *
-     *                 array[k] = rightArr[j];
-     *                 j++;
-     *
-     *             }
-     *
-     *             k++;
-     *
-     *         }
-     *
-     *         while (i < leftArr.length) {
-     *
-     *             array[k] = leftArr[i];
-     *             i++;
-     *             k++;
-     *
-     *         }
-     *
-     *         while (j < rightArr.length) { //fix off by one with midpoint and total array
-     *
-     *             array[k] = rightArr[j];
-     *             j++;
-     *             k++;
-     *
-     *         }
-     *
-     *     }
-     */
 
 
 }
