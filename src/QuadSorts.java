@@ -109,7 +109,7 @@ public class QuadSorts {
      */
     public static void mergeSort(int[] array) {
 
-        mergeSorter(array, 0, array.length); // calls mergeSorter() method with correct amount of arguments
+        mergeSorter(array, 0, array.length-1); // calls mergeSorter() method with correct amount of arguments
 
     }
 
@@ -122,7 +122,7 @@ public class QuadSorts {
      */
     static void mergeSorter(int[] arr, int l, int r) {
 
-        if (l < r) { // checks that you are in the right place of the array
+        if (l < r) {
 
             // Find the middle point
             int m = l + (r - l) / 2;
@@ -173,7 +173,8 @@ public class QuadSorts {
             if (L[i] <= R[j]) {
                 arr[k] = L[i];
                 i++;
-            } else {
+            }
+            else {
                 arr[k] = R[j];
                 j++;
             }
