@@ -9,6 +9,8 @@
 public class QuadSorts {
 
     /**
+     * 
+     * Uses the bubble sort algorithm - which works by checking two adjacent elements and swapping them until the array is sorted
      * @param array - an integer array to be sorted
      */
     public static void bubbleSort(int[] array) {
@@ -52,6 +54,8 @@ public class QuadSorts {
     }
 
     /**
+     * 
+     * Uses the selection sort algorithm - which works by finding the smallest element in the array and moving it to the front until the array is sorted
      * @param array - an integer array to be sorted
      */
     public static void selectionSort(int[] array) {
@@ -84,6 +88,8 @@ public class QuadSorts {
     }
 
     /**
+     * 
+     * Uses insertion sort algorithm - which works by going down the array and sorting; which makes it easier to sort the farther it goes, since it knows the elements before it are sorted correctly
      * @param array - an integer array to be sorted
      */
     public static void insertionSort(int[] array) {
@@ -105,6 +111,8 @@ public class QuadSorts {
     }
 
     /**
+     * 
+     * calls the mergeSorter method
      * @param array - an integer array to be sorted
      */
     public static void mergeSort(int[] array) {
@@ -116,6 +124,8 @@ public class QuadSorts {
     /**
      * copied from geeksforgeeks
      *
+     * breaks array down into sub-arrays
+     * 
      * @param arr - an integer array to be sorted
      * @param l   - the left index of the array to be used
      * @param r   - the right index of the array to be used
@@ -140,6 +150,7 @@ public class QuadSorts {
 
     /**
      * copied from geeksforgeeks
+     * sorts each subarray
      *
      * @param arr - an integer array to be sorted
      * @param l   - the left index of the array to merge back up
